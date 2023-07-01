@@ -244,7 +244,16 @@ ul[role="list"] a {
 
   .logo img {
     width: 80px;
-    margin: 0 51px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 10px;
+  }
+  ul[role='list'] li:nth-child(2){
+    margin-right: 50px;
+  }
+  ul[role='list'] li:nth-child(3){
+    margin-left: 50px;
   }
 
   .nav-links {
@@ -259,7 +268,6 @@ ul[role="list"] a {
     display: flex;
     gap: var(--size-600);
     align-items: center;
-    height: 100%;
   }
 }
 
@@ -494,11 +502,7 @@ form :nth-child(2) a {
   font-family: Cormorant;
 }
 
-@media (max-width:887px) {
-  form :nth-child(2) {
-    margin-top: 15px;
-  }
-}
+
 
 form button:not(:first-child):hover {
   background-color: var(--clr-accent-500);
@@ -1011,14 +1015,14 @@ button a {
 }
 
 
-
 .cards-container {
   display: grid;
   width: 100%;
   gap: 20px;
   padding-top: 100px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill , minmax(220px, 1fr));
 }
+/*fffffffffffffffffffffffd*/
 
 .cards-container .card-items {
   background-color: #fff;
@@ -1097,6 +1101,7 @@ button a {
   text-transform: capitalize;
 }
 
+/*fffffffffffffffffffffffd*/
 a {
   color: inherit;
   text-decoration: none;
@@ -1181,16 +1186,79 @@ span .relevanssi-query-term {
 }
 
 .search-and-filter-po-search-and-filter-po {
-  height: 80;
-  display: inline;
+  padding-top:150px;
   text-transform: capitalize;
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
-  font-size: 63.12;
-  font-family: Outfit;
-  width: 968;
+  font-size: 36px;
 }
-/* *{
-  eeh
-} */
+
+.searchandfilter > div > ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+.searchandfilter{
+  max-width: 1110px;
+  padding: 1rem;
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin: 0 auto;
+}
+.searchandfilter > div{
+  width: 100%;
+  position: relative;
+}
+.searchandfilter > div > ul li:nth-child(1){
+  width: 100%;
+  position: relative;
+}
+.searchandfilter > div > ul li:nth-child(1)::after{
+  content: "\f002";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 12px;
+  color: #524E77;
+  right: 30px;
+  font-size: 30px;
+}
+.searchandfilter > div > ul li:nth-child(1) input{
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 4px solid #524E77;
+  background: #2E2C3F;
+}
+
+.searchandfilter > div > ul li:nth-child(1) input:focus{
+ outline: none;
+}
+
+.searchandfilter > div > ul li:nth-child(2) select,
+.searchandfilter > div > ul li:nth-child(3) select{
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 4px solid #524E77;
+  background: #2E2C3F;
+}
+
+.searchandfilter > div > ul li select:focus{
+  outline: none;
+}
+
+.searchandfilter > div > ul li:nth-child(4) input[type="submit"]{
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 4px solid #524E77;
+  background: #2E2C3F;
+  position: absolute;
+  right: 7px;
+}

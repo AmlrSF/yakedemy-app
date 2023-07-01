@@ -18,15 +18,19 @@
     <header class="primary-header">
         <div class="container center ">
             <?php
-            wp_nav_menu(array(
-                'menu' => 'primary',
-                'container' => false,
-                'items_wrap' => '<ul role="list" id="navi" class="nav-links">%3$s</ul>'
-            ));
+                wp_nav_menu(array(
+                    'menu' => 'primary',
+                    'container' => false,
+                    'items_wrap' => '<ul role="list" id="navi" class="nav-links">%3$s</ul>'
+                ));
             ?>
-
+ 
+                 
+                  
+                    
+  
             <div class="logo">
-                <a href="">
+                <a href="<?php echo home_url(); ?>">
                     <?php
                     if (function_exists('the_custom_logo')) {
                         $custom_logo_id = get_theme_mod('custom_logo');
