@@ -1262,3 +1262,93 @@ span .relevanssi-query-term {
   position: absolute;
   right: 7px;
 }
+
+
+.cards-container{
+  display: grid;
+  width: 100%;
+  gap: 20px;
+  padding-top: 100px;
+  grid-template-columns: repeat( auto-fill, minmax(220px, 1fr) );
+}
+.cards-container .card-items{
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.cards-container .img-holder{
+  background-color: #faf5ed;
+  padding: 17px 17px 0 17px;
+
+}
+.cards-container .img-holder img{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cards-container .card-items .info{
+  position: absolute;
+  padding: 17px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.cards-container .card-items  .hide{
+  width: 100%;
+}
+.cards-container .card-items  .hide > p{
+  color: #878787;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.375;
+  text-transform: capitalize;
+}
+.cards-container .card-items  .hide > p:nth-child(1){
+  color: black;
+}
+.cards-container .card-items  .hide > span{
+  color: #878787;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.375;
+  display: block;
+  text-transform: capitalize;
+}
+
+.cards-container .card-items  .hide{
+  position: absolute;
+  opacity: 0; 
+  padding: 17px 17px 17px 17px;
+  text-align: left;
+  transform: translateY(98px); 
+  transition: transform .15s,opacity .15s;
+  z-index: 2;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #fff;
+}
+.cards-container .card-items:hover .hide{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.cards-container .card-items-items .info span{
+  color: #878787;
+  font-size: 14px;
+  line-height: 1.375;
+  text-transform: capitalize;
+}
+.cards-container .card-items  .info p{
+  color: rgba(0,0,0,1);
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 1.375;
+  text-transform: capitalize;
+}
